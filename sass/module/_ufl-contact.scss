@@ -1,0 +1,13 @@
+// Shortcode: [ufl_contact]
+.ufl-contact {
+  margin: 2em 0 2em 0;
+  //table-layout: fixed;
+  white-space: nowrap;
+  caption { 
+    text-align: left;
+    h3 { margin-bottom: 0; }
+  }
+  tr { height: 25px; }
+  .label { font-weight: bolder; }
+  .data { text-align: right; } 
+}

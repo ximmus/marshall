@@ -1,0 +1,91 @@
+      //
+     // __                ___                       _    __  
+    // / /  ___ ____ ___ / (_)__  ___ _______ _____(_)__/ /  
+   // / _ \/ _ `(_-</ -_) / / _ \/ -_)___/ _ `/ __/ / _  /   
+  // /_.__/\_,_/___/\__/_/_/_//_/\__/    \_, /_/ /_/\_,_/    
+ //                                     /___/                
+//
+
+@import 'baseline/logic';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: percentage( strip( $body ) / 16 ); // percentage for IE6 and below
+}
+
+html > body {
+  font-size: $body; // all other browsers
+}
+
+p, ol, ul {
+  font-size: 1em; // 14px
+  line-height: 1.2857142; // 18px
+  margin-top: 1.2857142em;
+  margin-bottom: 1.2857142em;
+  @include breakpoint( phone ) {
+    font-size: 0.8571428em; // 12px
+    line-height: 1.5; // 18px/12px
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+}
+
+ol, ul {
+  margin-left: 40px; 
+}
+
+h1 {
+  font-size: 3em; // 42px
+  line-height: 1.2857142; // 54px
+  margin-top: 0.4285714em; // 18px
+  margin-bottom: 0.4285714em; // 18px
+  // breakpoints
+  @include breakpoint( tablet ) {
+    font-size: 2.5em; // 35px
+    line-height: 1.0285714; // 36px
+    margin-top: 0.5142857em; // 18px
+    margin-bottom: 0.5142857em; // 18px
+  }
+  @include breakpoint( phone ) {
+    font-size: 2em; // 28px
+    line-height: 1.2857142; // 36px
+    margin-top: 0.6428571em; // 18px
+    margin-bottom: 0.6428571em; // 18px
+  }
+}
+
+h2 {
+  font-size: 2.25em;
+  line-height: 1.1428571;
+  margin-bottom: 0.5714285em;
+  // breakpoints
+  @include breakpoint( tablet ) {
+    font-size: 2em;
+  }
+  @include breakpoint( phone ) {
+    font-size: 1.8em;
+  }
+}
+
+h3 {
+  font-size: 1.175em;
+  line-height: 1.0942249;
+  margin-bottom: 1.0942249em;
+  // breakpoints
+  @include breakpoint( tablet ) {
+    font-size: 1.15em;
+  }
+  @include breakpoint( phone ) {
+    font-size: 1.1em;
+  }
+}
+
+h4 {
+  font-size: 1.125em;
+  line-height: 1.1428571;
+  margin-bottom: 1.1428571em;
+}

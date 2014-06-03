@@ -1,0 +1,28 @@
+{
+  "folders":
+  [
+    {
+    "path": "/",
+    "name": "Marshall",
+    "file_exclude_patterns": 
+      [ 
+      "*.sublime-project",
+      "*.sublime-workspace",
+      "fire_app_log.txt",
+      ".gitignore",
+      ".gitattributes",
+      "config.rb",
+      "README.md"
+      ],
+    "folder_exclude_patterns":
+      [
+        ".sass-cache",
+        "mocks"
+      ]
+    },
+    {
+      "path": "../../plugins",
+      "name": "Plugins"
+    }
+  ]
+}

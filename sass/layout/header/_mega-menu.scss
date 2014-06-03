@@ -1,0 +1,283 @@
+$touch-target: 70px;
+
+#mega-menu {
+  position: relative;
+  z-index: 999;
+  line-height: 32px;
+  max-height: 32px;
+
+  a {
+   border-bottom: none;
+  }
+
+  ul {
+    li {
+      float: left;
+      list-style-type: none;
+      padding-right: 5px;
+      color: $color-white;
+      height: 100%;
+      a {
+        color: $color-white;
+        text-decoration: none;
+        &:hover { border-bottom: 1px dashed $color-white; }
+      }
+      &:after {
+        content: "|";
+        padding-left: 5px;
+      }
+      &:last-child {
+        &:after { content: ""; }
+      }
+    }
+  } 
+
+  #menu-icon {
+    display: none;  
+  }
+
+  .home-icon {
+    background-color: #ffffff;
+    margin-right: 15px;
+    line-height: 0;
+    a:hover { border-bottom: none; }
+    &:after {
+      content: "";
+      padding-left: 5px;
+    }
+
+  #home-icon {
+    height: 32px;
+    width: 32px;
+    margin-left: 13px;
+      path {
+        fill: $color-blue-dark;
+        &:hover { fill: $color-orange; }
+      }        
+    }
+  }
+      
+  ul li:after {
+    padding-left: 0;
+  }
+      
+  .hide {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+    opacity: 0;
+    transition: opacity .5s;
+  }
+
+  .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: $color-blue-light;
+    padding: 0 10px 10px 20px;
+    transition: opacity .5s;
+  }
+
+  .children {    
+    li {
+      &:after {
+        content: "";
+      }      
+    }
+  }
+
+  .menu-item-depth-1 {
+    float: left;
+    width: 20%;
+    background: $color-blue-dark; 
+    padding-right: 0px; 
+    margin-right: 5%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+    // hack to pad line breaks part 1 of 2
+    box-shadow: 10px 0 0 $color-blue-dark, -10px 0 0 $color-blue-dark;
+
+    // return every four
+    &:nth-child(5n){
+      clear: left;
+    }
+  }
+
+  .menu-item-depth-2 {
+    float: none;
+    background: $color-blue-light;
+    line-height: 1.5em;
+    a {
+      font-size: .95em;
+    }
+
+    // hack to pad line breaks part 2 of 2
+    box-shadow: 10px 0 0 $color-blue-light, -10px 0 0 $color-blue-light;
+    margin-bottom: -1px;
+    margin-right: -1px;
+  }
+
+  .menu-item-depth-3, .menu-item-depth-4 { display: none; }
+} // end #mega-menu
+
+.svg-default {
+  display: none;
+  height: $touch-target;
+  width: $touch-target;
+  float: left;
+  margin: 3px 5px 0 0;
+  fill: $color-white;
+  svg {
+    @include rotate(0deg);
+    transition: all .25s;
+  }
+}
+
+.svg-active svg {
+  fill: $color-orange !important;
+  @include rotate(-45deg);
+}
+
+//---------->
+// NO-SVG FALLBACKS
+//---------->
+
+.no-svg {
+  .home-icon {
+    width: 57px;
+  }
+
+  #home-icon {
+    display: block;
+    height: 32px;
+    width: 52px;
+    background: url('images/png/home-icon.png') no-repeat center;
+  }
+}
+
+//---------->
+// BREAK-POINT
+//---------->
+
+@include breakpoint( tablet-large ) {
+  #mega-menu {
+    width: 50%;
+    height: 100%;
+    max-height: 100%;
+    padding: 5px 0 8px 15px;
+    position: fixed;
+    backface-visibility: hidden;
+    top: 0;
+    left: 100%;
+    transition-property: background-color, left;
+    transition-duration: 0.5s;
+    //transition-timing-function: ease-out;
+    background-color: $color-blue-dark;
+    line-height: 72px;
+    
+    .home-icon {
+      display: none;
+    }
+    
+    .menu-wrapper {
+      overflow: scroll;
+      height: 100%;
+      max-height: 100%;
+      -webkit-overflow-scrolling: touch;
+      -webkit-transform: translateZ(0);
+    }
+
+    ul {
+      padding: 0;
+
+      li {
+        float: none;
+        
+        // a {
+        //   font-size: 2.5em;
+        // }
+
+        &:after {
+          content: "";
+        }
+      }
+    }
+
+    .sub-menu {
+      position: relative;
+      //margin-bottom: -15px;
+      padding: 12px 20px 12px 20px;
+    }
+
+    .arrow {
+      display: none;
+    }
+    
+    .menu-item-depth-0 {
+      a {
+        font-size: 2.5em;
+      }
+    }
+
+    .menu-item-depth-1 {
+      float: none;
+      width: 100%;
+      a {
+        font-size: 2em;
+      }
+    }
+
+    .menu-item-depth-2 {
+      a {
+        font-size: 1.5em;
+        line-height: 2.5em;
+      }
+    }
+  } // end #mega-menu
+
+  #menu-icon {
+    display: block !important;
+    border-radius: 10px 0 0 10px;
+    color: $color-orange;
+    background-color: $color-blue-dark;
+    font-size: 4em;
+    font-family: monospace;
+    position: relative;
+    float: left !important;
+    right: 85px;
+    top: 25%;
+    width: $touch-target;
+    height: $touch-target;
+    padding: 4px 0 0 16px;
+    margin-right: -($touch-target);
+    &:hover {
+      cursor: pointer;
+    }
+
+    #hamenu {
+      height: $touch-target;
+      width: $touch-target;
+      stroke: #ffffff;
+
+    }
+  }
+
+  .svg-default {
+    display: block !important;
+  }
+
+  // Click Event Classes
+  .clicked {
+    left: 50% !important;
+    transition-property: background-color, right;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    background-color: rgba( $color-blue-dark, .9 )  !important;
+
+    #menu-icon { 
+      background-color: rgba( $color-blue-dark, .9 ) !important;        
+    }
+  }
+} // end BREAK-POINT

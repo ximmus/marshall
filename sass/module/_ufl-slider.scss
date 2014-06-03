@@ -1,0 +1,66 @@
+.ufl-slider {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom: none;
+    color: #EEE;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
+
+    &:hover { 
+      border-bottom: none;
+      color:  #EEE;
+    }
+    
+    &:visited { color:  #EEE; }
+    
+    > div {
+      width: 50%;
+      position: relative;
+      left: 20px;
+    }
+
+    h3 {
+      font-size: 2.5em;
+      margin-bottom: .25em;
+      color: #EEE;
+    }
+
+    span {
+      margin-top: 0;
+    }
+  } // end a
+
+  // Slide Movement
+  .current { 
+    right: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+  }
+  
+  .next {
+    left: 100%;
+    z-index: -1;
+    transition: all 1s ease-in-out;
+  }
+  
+  .prev {
+    right: 100%;
+    z-index: -1;
+    transition: all 1s ease-in-out;
+  }
+
+  .hide { display: none; }
+}

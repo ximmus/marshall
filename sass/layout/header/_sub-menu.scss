@@ -1,0 +1,106 @@
+#top-menu {
+  .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: $color-white;
+    border: 8px solid #FFF;
+    padding: 5px 10px 25px 20px;
+    transition: opacity .5s;
+  }
+  .sub-menu.hide {
+    // position: absolute !important;
+    // top: -9999px !important;
+    // left: -9999px !important;
+    display: none;
+    opacity: 0;
+    transition: opacity .5s;
+  }
+  .sub-menu {
+    .sub-menu-item:after { content: ""; }
+    
+    .menu-item-depth-1 {
+      float: left;
+      width: 20%;
+      background: $color-blue-dark; 
+      padding: 10px 0 4px 0; 
+      margin-right: 5%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      > a { 
+        line-height: 1.25em;
+        font-size: 1em;
+        margin: 5px 0;
+      }
+      box-shadow: 10px 0 0 $color-blue-dark, -10px 0 0 $color-blue-dark; // hack to pad line breaks part 1 of 2
+      &:nth-child(5n) { clear: left; } // return every four
+      > .children { margin: 10px 0 -24px 0; }
+    } //-END-> .menu-item-depth-1
+    
+    .menu-item-depth-2 {
+      float: none;
+      background: $color-white;
+      padding: 5px 0;
+      box-shadow: 10px 0 0 $color-white, -10px 0 0 $color-white; // hack to pad line breaks part 2 of 2
+      &:first-of-type { padding-top: 10px; }
+      > a {
+        line-height: 1.25em;
+        font-size: 1em;
+        color: $color-blue-dark;
+        &:hover{ color: $color-orange; }
+      }
+      .children,
+      .children:after { 
+        display: none;
+      }      
+    } //-END-> .menu-item-depth-2
+
+    .menu-item-depth-3, 
+    .menu-item-depth-4 { 
+      display: none; 
+    }
+
+  } //-END-> .sub-menu
+} //-END-> #top-menu
+
+// //---------->
+// // BREAK-POINT
+// //---------->
+
+@include breakpoint( tablet-large ) {
+  #top-menu {
+    padding-left: 0;
+    .sub-menu {
+      position: relative;
+      min-width: 101%;
+      padding: 12px 0 12px 20px;
+      border: none;
+
+      .menu-item-depth-1 {
+        float: none;
+        width: 100%;
+        margin-bottom: 25px;
+        a { 
+          font-size: 1.5em;
+          line-height: 1em;
+        }
+        > .children {
+
+        }
+      }
+
+      .menu-item-depth-2 {
+
+        a {
+          font-size: 1em;
+          line-height: 1.5em;
+        }
+      }
+    } // END: .sub-menu
+
+    .menu-item-depth-0 {
+      padding-left: 0;
+    }
+  }
+}

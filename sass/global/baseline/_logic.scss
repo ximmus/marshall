@@ -1,0 +1,15 @@
+// strip units
+@function strip( $unit ) {
+  @return $unit / ($unit * 0 + 1);
+}
+
+// repeating function
+@function repeat( $pete, $repeat ) {
+  $i: 0;
+  $petes: ''; // initiate empty variable
+  @while $i < $repeat {
+    $petes: $petes + $pete;
+    $i: $i + 1;
+  }
+  @return $petes;
+}

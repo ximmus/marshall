@@ -1,0 +1,178 @@
+$border: 1px solid $color-white;
+$border-bottom: 1px solid $color-grey-light;
+
+.sidebar {
+  margin: 1em 0 2em 0;
+  list-style-type: none;
+  ul {
+    margin: 0;
+  }
+  
+  li.page_item { 
+    list-style-type: none; 
+  
+  
+  a { 
+    color: $color-blue-dark;
+    font-size: 1.05em;
+    display: block;
+    line-height: 2em;
+    padding: 0 10px 0 10px;
+    
+    // border
+    border-top: $border;
+    border-right: $border;
+    border-bottom: none;
+    border-left: $border;
+    
+    // underline
+    text-decoration: none;
+    &:hover {
+      background-color: $color-white;
+      border-bottom: none; 
+    }
+  }
+  } 
+
+  .menu-item-depth-0 {
+    > a { display: none !important; } // hide the top-level link
+
+    // borders
+    .sub-menu {
+      > .children { 
+        > li{
+          &:last-of-type {
+            > a { border-bottom: $border !important; }
+            > .children { 
+              > li { 
+                &:last-of-type { 
+                  > a { border-bottom: $border !important; }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // borders
+  .current_page_ancestor {
+    > a { border-bottom: $border-bottom; }
+  } 
+  
+  // Add indention to submenus
+  .menu-item-depth-2 {
+    > a {
+      margin-left: 1em;
+      font-size: 1em;
+    }
+  } // END .menu-item-2
+
+  .menu-item-depth-3 {
+    > a {
+      margin-left: 1.5em;
+      font-size: .95em;
+    }
+  } // END .menu-item-3
+
+    .menu-item-depth-4 {
+    > a {
+      margin-left: 2em;
+      font-size: .90em;
+    }
+  } // END .menu-item-4
+  
+  // current page
+  li.current_page_item {
+    > a { background-color: $color-blue-dark; color: $color-white; }     
+  }
+
+  // show hide current page submenu //
+  .menu-item-depth-2, .menu-item-depth-3, .menu-item-depth-4 { display: none; } // hide on default
+
+  .current_page_item, .current_page_parent, .current_page_ancestor {
+    display: block;
+
+    &.menu-item-depth-1 {
+      .menu-item-depth-2 { display: block; } // Level 2
+    }    
+
+    &.menu-item-depth-2 {
+      .menu-item-depth-3 { display: block; } // Level 3
+    }    
+
+    &.menu-item-depth-3 {
+      .menu-item-depth-4 { display: block; } // Level 4
+    }
+  }
+
+  .svg-default { display: none; }
+  
+}
+
+// Special style for the clinics and centers
+.clinics-centers {
+  li.page_item {
+    float: left;
+    //> a { padding: 0 30px; }
+
+    a {
+      background-color: #FFF;
+
+      border-top: $border;
+      border-right: none;
+      border-bottom: $border;
+      border-left: $border;       
+      &:last-of-type { border-right: $border; }
+    }
+  }
+
+  li.page_item > a { color: $color-blue-dark; }
+  
+  .menu-item-depth-2, .menu-item-depth-3, .menu-item-depth-4 { display: none; } // hide on default
+
+  .current_page_item, .current_page_parent, .current_page_ancestor {
+    display: block;
+
+    &.menu-item-depth-1 {
+      .menu-item-depth-2 { display: none; } // Level 2
+    }    
+
+    &.menu-item-depth-2 {
+      .menu-item-depth-3 { display: none; } // Level 3
+    }    
+
+    &.menu-item-depth-3 {
+      .menu-item-depth-4 { display: none; } // Level 4
+    }
+  }
+
+  .menu-item-depth-1 {
+    &:hover{
+      position: relative;
+      > .children {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        width: 200px;
+      }
+      .menu-item-depth-2 {
+        display: block;
+        float: none;
+      }
+    }
+  }
+
+  .menu-item-depth-2:hover{
+    .menu-item-depth-3 {
+      display: block;
+      float: none;
+    }
+  }
+}
+
+@include breakpoint( tablet-large ) {
+  .sidebar { display: none; }
+}

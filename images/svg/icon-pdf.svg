@@ -1,0 +1,15 @@
+<svg id="icon-pdf" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="11px" viewBox="0 0 14 11" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{fill:none;stroke:#ff4a00;stroke-linecap:round;}
+	.st1{fill:none;stroke:#ff4a00;}
+]]>
+</style>
+<g>
+	<polyline id="frame" class="st0" points="7.5,9 7.5,10.5 0.5,10.5 0.5,0.5 7.5,0.5 7.5,3 	"></polyline>
+	<path id="letter-p" class="st1" d="M3.5,8V4.5H5c0.553,0,1,0.448,1,1c0,0.553-0.447,1-1,1H3"></path>
+	<path id="letter-d" class="st1" d="M7.5,7.5v-3h1.117c0.828,0,1.5,0.672,1.5,1.5s-0.672,1.5-1.5,1.5H7.5z"></path>
+	<line id="letter-f-crossbar" class="st1" x1="13" y1="6.5" x2="12" y2="6.5"></line>
+	<polyline id="letter-f" class="st1" points="11.5,8 11.5,4.5 14,4.5 	"></polyline>
+</g>
+</svg>

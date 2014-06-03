@@ -1,0 +1,52 @@
+#library-search {
+  padding: 0;
+  margin: 1em 0 1em 0;
+  > ul {
+    float: right;
+    position: relative;
+    top: -40px;
+  }
+  form {
+    height: 29px;
+  }
+  input {
+    float: left;
+    position: relative;
+    top: -22px;
+    width: 100%;
+    padding-right: 29px;
+  }
+  button {
+    top: -47px;
+  }
+
+  #formCatalog {
+    #text_formCatalog { 
+      width: 54%;
+      top: 0; 
+    }
+
+    #catsearch { 
+      position: relative;
+      top: -20px; 
+      width: 41%;
+      border: none;
+      border-left: 1px solid $color-grey;
+      padding-left: 20px;
+
+    }
+
+    button { 
+    //   float: none;
+      top: -25px;
+    }
+  }
+
+  #form-database {
+    select {
+      width: 100%;
+      position: relative;
+      top: -20px;
+    }
+  }
+}

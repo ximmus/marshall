@@ -1,0 +1,31 @@
+//---------->
+// IMPORTS
+//---------->
+
+// Compass Dependencies
+@import "compass/css3/transform"; // used in "mega-menu"
+
+//---------->
+// VARIABLES
+//----------> 
+
+// Baseline Variables
+$body: 14px;
+
+// Colors
+$color-blue-light: #445db0;
+$color-blue-med: #112b80;
+$color-blue-dark: #000a2d;
+$color-orange: #ff4a00;
+$color-grey: #999999;
+$color-grey-light: #BBBBBB;
+$color-white: #DDDDDD;
+$color-clear: rgba(255,255,255,0); 
+
+// Modules
+$sticky-footer: 32em; // height of the [ _sticky-footer.scss ]
+$color-bar: $color-blue-dark;
+$color-bar-text: $color-white;
+
+// Touch Target
+$touch-target: 70px;

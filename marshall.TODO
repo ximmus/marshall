@@ -1,0 +1,22 @@
+UF Law Redesign To Do List:
+  ✔ install Modernizer: http://modernizr.com/docs/#installing @done (14-03-03 08:46)
+  ☐ install the webfontloader: https://github.com/typekit/webfontloader
+
+Header:
+  ✔ SVG: small icon on quick-menu @done (14-03-04 17:01)
+  ✔ SVG: large main logo (use text?) @done (14-03-04 17:01)
+  ✔ SVG: home icon? (I really don't like the home icon, figure out something else) @done (14-03-04 17:01)
+  ☐ CSS/HTML: searchbox
+  ☐ RWD: main logo on top, search box under logo, mega-menu side slide (internal scrolling?)
+      sideslide:
+        ✔ enque scrips (jqery/sideslide) @done (14-03-04 17:00)
+        ☐ styling
+            ☐ SVG: menu icon that doesn't suck
+        ☐ internal scrolling?
+        ☐ add swipe function later
+  ☐ HTML/CSS/JS: mega-menu with colapsing functionality
+Footer:
+  ☐ RWD: stack logo ontop of footer stuff
+
+SVG:
+ ☐ create sprite for ie fallbacks

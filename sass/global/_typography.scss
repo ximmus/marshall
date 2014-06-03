@@ -1,0 +1,136 @@
+       /////////////////////////////////////////////////////////////
+      // __                                          __          //
+     // / /_ __ __ ___  ___  ___ _ ____ ___ _ ___   / /  __ __  //
+    // / __// // // _ \/ _ \/ _ `// __// _ `// _ \ / _ \/ // / // 
+   //  \__/ \_, // .__/\___/\_, //_/   \_,_// .__//_//_/\_, / //
+  //       /___//_/        /___/           /_/         /___/ //
+ //                                                         //
+/////////////////////////////////////////////////////////////
+
+// NOTE: Font sizes are controled through the baseline grid system not here.
+
+html > body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+// Calm the OSX subpixel cubbiness and render legibility.
+body, input, button {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; 
+}
+
+// headings
+h1, h2, h3, h4, h5, h6 {
+  color: $color-blue-dark;
+}
+
+// Add hyphens when a word breaks.
+p {
+  word-break: break-all;
+
+  /* Non standard for webkit */
+  word-break: break-word;
+
+  -webkit-hyphens: auto;
+  -moz-hyphens:    auto;
+  -ms-hyphens:     auto;
+  hyphens:         auto;
+}
+
+// Links
+a {
+  &:link{ 
+    color: $color-blue-light;
+    text-decoration: none; 
+    border-bottom: 1px dashed $color-blue-light;
+  }
+  &:visited{
+    color: $color-blue-med; 
+    border-bottom-color: $color-blue-med;
+  }
+  &:hover{
+    color: $color-orange; 
+    border-bottom-color: $color-orange;
+  }
+  &:active{
+    color: $color-orange; 
+    border-bottom-color: $color-orange;
+  }
+  
+  // PDF specific icon
+  &[href$=".pdf"] { background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbi1wZGYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIxNHB4IiBoZWlnaHQ9IjExcHgiIHZpZXdCb3g9IjAgMCAxNCAxMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+CjwhW0NEQVRBWwoJLnN0MHtmaWxsOm5vbmU7c3Ryb2tlOiNmZjRhMDA7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7fQoJLnN0MXtmaWxsOm5vbmU7c3Ryb2tlOiNmZjRhMDA7fQpdXT4KPC9zdHlsZT4KPGc+Cgk8cG9seWxpbmUgaWQ9ImZyYW1lIiBjbGFzcz0ic3QwIiBwb2ludHM9IjcuNSw5IDcuNSwxMC41IDAuNSwxMC41IDAuNSwwLjUgNy41LDAuNSA3LjUsMyAJIj48L3BvbHlsaW5lPgoJPHBhdGggaWQ9ImxldHRlci1wIiBjbGFzcz0ic3QxIiBkPSJNMy41LDhWNC41SDVjMC41NTMsMCwxLDAuNDQ4LDEsMWMwLDAuNTUzLTAuNDQ3LDEtMSwxSDMiPjwvcGF0aD4KCTxwYXRoIGlkPSJsZXR0ZXItZCIgY2xhc3M9InN0MSIgZD0iTTcuNSw3LjV2LTNoMS4xMTdjMC44MjgsMCwxLjUsMC42NzIsMS41LDEuNXMtMC42NzIsMS41LTEuNSwxLjVINy41eiI+PC9wYXRoPgoJPGxpbmUgaWQ9ImxldHRlci1mLWNyb3NzYmFyIiBjbGFzcz0ic3QxIiB4MT0iMTMiIHkxPSI2LjUiIHgyPSIxMiIgeTI9IjYuNSI+PC9saW5lPgoJPHBvbHlsaW5lIGlkPSJsZXR0ZXItZiIgY2xhc3M9InN0MSIgcG9pbnRzPSIxMS41LDggMTEuNSw0LjUgMTQsNC41IAkiPjwvcG9seWxpbmU+CjwvZz4KPC9zdmc+) right center no-repeat; padding-right: 20px; }
+
+  // Email specific icon
+  &[href^="mailto"] { background: url(data:image/svg+xml;base64,PHN2ZyAKICB2ZXJzaW9uPSIxLjEiIAogIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgCiAgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIAogIHg9IjBweCIgeT0iMHB4IgoJd2lkdGg9IjE3Ljg3NXB4IiBoZWlnaHQ9IjExcHgiIAogIHZpZXdCb3g9IjAgMCAxNy44NzUgMTEiIAogIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgo8IVtDREFUQVsKCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojZmY0YTAwO3N0cm9rZS1saW5lY2FwOnJvdW5kO30KXV0+Cjwvc3R5bGU+Cgk8cG9seWxpbmUgY2xhc3M9InN0MCIgcG9pbnRzPSIxMSwxMC41IDAuNSwxMC41IDAuNSwwLjUgMTMsMC41IAkiPjwvcG9seWxpbmU+Cgk8cG9seWxpbmUgY2xhc3M9InN0MCIgcG9pbnRzPSIyLjUsMi41IDcuMTI1LDYuMTI1IDEzLjE2NywwLjU0MSAJIj48L3BvbHlsaW5lPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE2LjY0OCw4LjY3M2MtMC41ODgsMC41ODktMS40LDAuODI3LTIuMjk3LDAuODI3SDE0LjVjLTEuNzk1LDAtMy4yNS0xLjMzLTMuMjUtMy4xMjUKCQljMC0xLjc5NiwxLjQ1NS0zLjE4OCwzLjI1LTMuMTg4czIuODc1LDEuNzM1LDIuODc1LDMuNTMxTDE1LjM0NCw3LjVoLTEuNWMtMC41NTMsMC0xLTAuNDQ4LTEtMWMwLTAuNTUzLDAuNDQ3LTEsMS0xSDE1LjVWNyI+PC9wYXRoPgo8L3N2Zz4=) right center no-repeat; padding-right: 22px;}
+
+  &.no-line {
+    border: none;
+    background: none;
+  }
+}
+
+ul a, ol a {
+  &:link{ 
+    border-bottom: none;
+  }
+  &:visited{
+    border-bottom-color: none;
+  }
+  &:hover{
+    border-bottom: 1px dashed $color-orange;
+  }
+  &:active{
+    color: $color-orange; 
+    border-bottom: 1px dashed $color-orange;
+  }
+}
+
+// Lists
+ul {
+  list-style-type: square;
+  list-style-position: outside;
+}
+
+// blockquotes
+blockquote {
+  font-style: italic;
+  color: $color-blue-med;
+  background-color: $color-white;
+  padding: 0 10px 1px 10px;
+  margin: 10px 0 15px 0;
+  overflow: auto;
+  &:before {
+    content: "\201C";
+    display: inline-block;
+    font-family: 'Holtwood One SC';
+    font-size: 9em;
+    line-height: 0;
+    color: #FFF;
+    position: relative;
+    top: 44px;
+    right: 34px;    
+  }
+
+  > p {
+    margin-left: 95px;
+    padding-right: 30px;
+    &:first-of-type{ margin-top: -32px; }    
+  }
+
+  img {
+    border: 5px solid #FFF;
+    float: right;
+    margin: 20px 0 20px 20px; 
+  }
+}
+
+// horizontal line
+hr {
+  border: 0;
+  border-bottom: 2px dashed $color-blue-dark;
+  margin-bottom: 1em;
+}
+
+// Style Guide:
+// hyphen: only used for compound modifiers (such as "fine-tuned");
+// en dash: &ndash; flanked by two spaces (such as "This is the title - the is the subtitle");

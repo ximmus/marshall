@@ -1,0 +1,48 @@
+.quick-menu {
+  line-height: 20px;
+  ul {
+    margin: 0;
+    li {
+      padding: 4px 0 0 15px;
+    }
+    a {
+      border-bottom: none;
+      color: $color-white;
+      padding-right: 10px;
+      &:hover {
+        border-bottom: none;
+        color: $color-orange;
+      }        
+    }
+    .logo-uf {
+      width: 100px; 
+      height: 36px;
+      padding: 5px 5px 0 5px; 
+      margin: 0 10px -10px 0;
+      background-color: white;
+      &:after { content: ""; }
+    }
+  }
+  em{ font-size: 80%; }
+} //-END-> .quick-menu
+
+#svg-top {
+  svg {
+    width: 89px;
+    height: 25px;
+  }
+  .divider { fill: $color-orange; }
+  .uf, 
+  .timeline, 
+  .university, 
+  .of, 
+  .florida { fill: $color-blue-dark; }
+} //-END-> #svg-top
+
+  /////////////////
+ // BREAK-POINT //
+/////////////////
+
+@include breakpoint( tablet-large ) {
+  .quick-menu { display: none; }
+}

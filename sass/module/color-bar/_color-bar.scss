@@ -1,0 +1,27 @@
+      //////////////////////////////////////////////////////
+     //              __                 __               //
+    //   ____ ___   / /___   ____ ____ / /  ___ _ ____  //
+   //   / __// _ \ / // _ \ / __//___// _ \/ _ `// __/ //
+  //    \__/ \___//_/ \___//_/       /_.__/\_,_//_/   //
+ //                                                  //
+//////////////////////////////////////////////////////
+
+// import logic
+//@import 'full-width-logic';
+
+.color-bar {
+  position: relative;
+  background: $color-bar;
+  color: $color-bar-text;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -9999px;
+    right: 0;
+    border-left: 9999px solid $color-bar;
+    box-shadow: 9999px 0 0 $color-bar;
+  }
+}

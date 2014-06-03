@@ -1,0 +1,186 @@
+#top-menu {
+  position: relative;
+  z-index: 999;
+  
+  a {
+    color: $color-white;
+    font-size: 1.2em;
+    line-height: 38px;
+
+    // remove the defaut style
+    border-bottom: none;
+    &:hover {
+      border-bottom: none;
+      color: $color-orange;
+    }
+  }
+
+  ul {
+    margin: 0;
+    li {
+      float: left;
+      list-style-type: none;
+      padding: 0 5px;
+      &:after {
+        content: "|";
+        margin-left: 5px;
+      }
+      &:first-child {
+        &:after { 
+          content: ""; 
+          margin-left: 0;
+        }
+      }
+      &:last-child {
+        &:after { content: ""; }
+      }
+    }
+
+    #home {
+      background-color: #ffffff;
+      padding: 0 13px;
+      margin-right: 10px;
+      > a { line-height: 0; }
+    }
+  }
+} // end #mega-menu
+
+#home-icon {
+  height: 34px;
+  width: 34px;
+  path {
+    fill: $color-blue-dark;
+    &:hover { fill: $color-orange; }
+  }        
+}
+
+
+.svg-default {
+  display: none;
+  height: $touch-target;
+  width: $touch-target;
+  float: left;
+  margin: 3px 5px 0 0;
+  fill: $color-white;
+  svg {
+    @include rotate(0deg);
+    transition: all .25s;
+  }
+}
+
+#menu-icon {
+  display: none;  
+}
+
+//---------->
+// NO-SVG FALLBACKS
+//---------->
+
+.no-svg {
+  .home-icon {
+    width: 57px;
+  }
+
+  #home-icon {
+    display: block;
+    height: 32px;
+    width: 52px;
+    background: url('images/png/home-icon.png') no-repeat center;
+  }
+}
+
+//---------->
+// BREAK-POINT
+//---------->
+
+@include breakpoint( tablet-large ) {
+  #home-icon {
+    display: none;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block !important;
+    border-radius: 10px 0 0 10px;
+    color: $color-orange;
+    background-color: $color-blue-dark;
+    font-size: 4em;
+    font-family: monospace;
+    position: relative;
+    float: left !important;
+    right: 70px;
+    top: 25%;
+    width: $touch-target;
+    height: $touch-target;
+    padding: 4px 0 0 16px;
+    margin-right: -($touch-target);
+    &:hover {
+      cursor: pointer;
+    }
+
+    #hamenu {
+      height: $touch-target;
+      width: $touch-target;
+      stroke: #ffffff;
+    }
+  } // END: #menu-icon
+
+  #top-menu {
+    width: 50%;
+    height: 100%;
+    max-height: 100%;
+    padding: 5px 0 8px 15px;
+    position: fixed;
+    backface-visibility: hidden;
+    top: 0;
+    left: 100%;
+    transition-property: background-color, left;
+    transition-duration: 0.5s;
+    background-color: $color-blue-dark;
+    ul {
+      padding: 0;
+      li {
+        float: none;
+        &:after { content: ""; }
+      }
+    }
+
+    .menu-item-depth-0 {
+      height: 100%;
+      > a {
+        font-size: 2.5em;
+        line-height: 2.2em;
+      }
+    }
+
+    .svg-default { display: block !important; }
+
+    .svg-active svg {
+      fill: $color-orange !important;
+      @include rotate(-45deg);
+    }
+  } // END: #top-menu
+
+  .clicked {
+    left: 50% !important;
+    transition-property: background-color, right;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    background-color: rgba( $color-blue-dark, .9 )  !important;
+
+    #menu-icon { 
+      background-color: rgba( $color-blue-dark, .9 ) !important;        
+    }
+  }
+
+  .menu-wrapper {
+    overflow: scroll;
+    height: 100%;
+    max-height: 100%;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translateZ(0);
+  }
+} //- END -> BP: tablet-large

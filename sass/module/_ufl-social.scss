@@ -1,0 +1,77 @@
+// Social Icons
+
+$color-facebook: #36609F;
+$color-twitter:  #2AA9E0;
+$color-linkedin: #066C9A;
+$color-vimeo:    #00B9EA;
+$icon-width: 32px;
+$icon-height: 28px;
+
+.ufl-social {
+  padding: 0;
+  margin: 0;
+  
+  li {
+    float: left;
+    list-style-type: none;
+
+    a { 
+      border-bottom: none;
+      &:link{ 
+        color: transparent;
+        border-bottom: none;
+      }
+      &:visited{
+        color: transparent; 
+        border-bottom: none;
+      }
+      &:hover{
+        color: transparent; 
+        border-bottom: none;
+      }
+      &:active{
+        color: transparent; 
+        border-bottom: none;
+      } 
+    }
+  }
+}
+
+.facebook {
+  width: $icon-width;
+  height: $icon-height;
+  #g-facebook { fill: $color-facebook; }
+  &:hover {
+    #g-facebook { fill: $color-white; }
+  }
+}
+
+.twitter {
+  fill: $color-twitter;
+  width: $icon-width;
+  height: $icon-height;
+  #g-twitter { fill: $color-twitter; }
+  &:hover {
+    #g-twitter { fill: $color-white; }
+  }
+}
+
+.linkedin {
+  fill: $color-linkedin;
+  width: $icon-width;
+  height: $icon-height;
+  #g-linkedin { fill: $color-linkedin; }
+  &:hover {
+    #g-linkedin { fill: $color-white; }
+  }
+}
+
+.vimeo {
+  fill: $color-vimeo;
+  width: $icon-width;
+  height: $icon-height;
+  #g-vimeo { fill: $color-vimeo; }
+  &:hover {
+    #g-vimeo { fill: $color-white; }
+  }
+}

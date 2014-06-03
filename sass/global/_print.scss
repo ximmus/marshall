@@ -1,0 +1,20 @@
+@media print {
+
+  // I want to paint it black...
+  * {
+    background: transparent !important;
+    color: #000000 !important; //
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  // Paging
+  p, h2, h3 {
+    orphans: 3;
+    windows: 3;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}

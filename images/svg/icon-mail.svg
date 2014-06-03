@@ -1,0 +1,18 @@
+<svg 
+  version="1.1" 
+  xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  x="0px" y="0px"
+	width="17.875px" height="11px" 
+  viewBox="0 0 17.875 11" 
+  xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{fill:none;stroke:#ff4a00;stroke-linecap:round;}
+]]>
+</style>
+	<polyline class="st0" points="11,10.5 0.5,10.5 0.5,0.5 13,0.5 	"></polyline>
+	<polyline class="st0" points="2.5,2.5 7.125,6.125 13.167,0.541 	"></polyline>
+	<path class="st0" d="M16.648,8.673c-0.588,0.589-1.4,0.827-2.297,0.827H14.5c-1.795,0-3.25-1.33-3.25-3.125
+		c0-1.796,1.455-3.188,3.25-3.188s2.875,1.735,2.875,3.531L15.344,7.5h-1.5c-0.553,0-1-0.448-1-1c0-0.553,0.447-1,1-1H15.5V7"></path>
+</svg>

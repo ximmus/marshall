@@ -1,0 +1,56 @@
+      //                   ___     ______            __  
+     //  ____  _____ _____/ _/__ _/ / / /  ___ _____/ /__
+    //  (_-< |/ / _ `/___/ _/ _ `/ / / _ \/ _ `/ __/  '_/
+   //  /___/___/\_, /   /_/ \_,_/_/_/_.__/\_,_/\__/_/\_\ 
+  //           /___/                                     
+ //
+
+.no-svg {
+  #svg-top {
+    display: block;
+    width: 90px;
+    height: 18px;
+    background-image: url('images/png/uf_signature-top.png');
+  }
+
+  #svg-header {
+    display: block;
+    height: 63px;
+    width: 440px;
+    background: url('images/png/levin_college_of_law.png');
+  }
+
+  .search-social {
+    .icon {
+      display: list-item;
+      height: 32px;
+      width: 32px;
+      margin-right: 5px;
+    }
+    
+    input {
+      padding: 5px 3px 6px 3px;
+    }
+  }
+
+  #social-icon-facebook {
+    display: block;
+    height: 32px;
+    width: 32px;
+    background: url('images/png/social_icon-facebook.png');
+  }
+
+  #social-icon-twitter {
+    display: block;
+    height: 32px;
+    width: 32px;
+    background: url('images/png/social_icon-twitter.png');
+  }
+
+  #social-icon-linkedin {
+    display: block;
+    height: 32px;
+    width: 32px;
+    background: url('images/png/social_icon-linkedin.png');
+  }
+}
