@@ -7,6 +7,9 @@
 // Script Control
 require_once( 'includes/script-control.php' );
 
+// WPAlchemy MetaBox PHP Class
+require_once( 'includes/metaboxes/setup.php' );
+
 // Menus
 require_once( 'includes/menu/menu_control.php' );
 
@@ -25,41 +28,44 @@ require_once( 'includes/facultyFunctionality.php' );
 // Post Thumbnails
 require_once( 'includes/thumbnails.php' );
 
+// Courses
+require_once( 'includes/courses.php' );
+
   ////////////////
  // SHORTCODES //
 ////////////////
 
 // Shortcode Filter
-require_once( 'includes/shortcode-filter.php' );
+require_once( 'includes/shortcodes/shortcode-filter.php' );
 
 // Subcontent
-require_once( 'includes/subcontent.php' );
+require_once( 'includes/shortcodes/subcontent.php' );
 
 // Columns
-require_once( 'includes/ufl-columns.php' );
+require_once( 'includes/shortcodes/ufl-columns.php' );
 
 // Staff Profile
-require_once( 'includes/staff-profile.php' );
+require_once( 'includes/shortcodes/staff-profile.php' );
 
 // Library Search
-require_once( 'includes/library-search.php' );
+require_once( 'includes/shortcodes/library-search.php' );
 
 // Searchbar
-require_once( 'includes/ufl-searchbar.php' );
+require_once( 'includes/shortcodes/ufl-searchbar.php' );
  
 // UFL Bootstrap-Type Stuff //
 
 // UFL UI
-require_once( 'includes/ufl-ui.php' );
+require_once( 'includes/shortcodes/ufl-ui.php' );
 
 // Slider
-require_once( 'includes/ufl-slider.php' );
+require_once( 'includes/shortcodes/ufl-slider.php' );
 
 // Button
-require_once( 'includes/ufl-button.php' );
+require_once( 'includes/shortcodes/ufl-button.php' );
 
 // Social Icons
-require_once( 'includes/ufl-social.php' );
+require_once( 'includes/shortcodes/ufl-social.php' );
 
 // Contact Information Box
-require_once( 'includes/ufl-contact.php' );
+require_once( 'includes/shortcodes/ufl-contact.php' );

@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700);
 /* line 18, sass/global/reset/_html5-display.scss */
 article,
 aside,
@@ -263,9 +264,9 @@ html > body {
 /* line 24, sass/global/_baseline.scss */
 p, ol, ul {
   font-size: 1em;
-  line-height: 1.2857142;
-  margin-top: 1.2857142em;
-  margin-bottom: 1.2857142em;
+  line-height: 1.2857142857;
+  margin-top: 1.2857142857em;
+  margin-bottom: 1.2857142857em;
 }
 @media (max-width: 30em) {
   /* line 24, sass/global/_baseline.scss */
@@ -286,16 +287,14 @@ ol, ul {
 h1 {
   font-size: 3em;
   line-height: 1.2857142;
-  margin-top: 0.4285714em;
-  margin-bottom: 0.4285714em;
+  margin-top: 0.4285714286em 0;
 }
 @media (max-width: 70em) {
   /* line 41, sass/global/_baseline.scss */
   h1 {
     font-size: 2.5em;
     line-height: 1.0285714;
-    margin-top: 0.5142857em;
-    margin-bottom: 0.5142857em;
+    margin-top: 0.5142857em 0;
   }
 }
 @media (max-width: 30em) {
@@ -303,54 +302,53 @@ h1 {
   h1 {
     font-size: 2em;
     line-height: 1.2857142;
-    margin-top: 0.6428571em;
-    margin-bottom: 0.6428571em;
+    margin: 0.6428571em 0;
   }
 }
 
-/* line 61, sass/global/_baseline.scss */
+/* line 58, sass/global/_baseline.scss */
 h2 {
-  font-size: 2.25em;
-  line-height: 1.1428571;
-  margin-bottom: 0.5714285em;
+  font-size: 2.2857142857em;
+  line-height: 1.125;
+  margin: 0.5625em 0;
 }
 @media (max-width: 70em) {
-  /* line 61, sass/global/_baseline.scss */
+  /* line 58, sass/global/_baseline.scss */
   h2 {
     font-size: 2em;
   }
 }
 @media (max-width: 30em) {
-  /* line 61, sass/global/_baseline.scss */
+  /* line 58, sass/global/_baseline.scss */
   h2 {
     font-size: 1.8em;
   }
 }
 
-/* line 74, sass/global/_baseline.scss */
+/* line 71, sass/global/_baseline.scss */
 h3 {
-  font-size: 1.175em;
-  line-height: 1.0942249;
-  margin-bottom: 1.0942249em;
+  font-size: 1.1428571429em;
+  line-height: 1.125;
+  margin: 1.125em 0;
 }
 @media (max-width: 70em) {
-  /* line 74, sass/global/_baseline.scss */
+  /* line 71, sass/global/_baseline.scss */
   h3 {
     font-size: 1.15em;
   }
 }
 @media (max-width: 30em) {
-  /* line 74, sass/global/_baseline.scss */
+  /* line 71, sass/global/_baseline.scss */
   h3 {
     font-size: 1.1em;
   }
 }
 
-/* line 87, sass/global/_baseline.scss */
+/* line 84, sass/global/_baseline.scss */
 h4 {
-  font-size: 1.125em;
-  line-height: 1.1428571;
-  margin-bottom: 1.1428571em;
+  font-size: 1.0714285714em;
+  line-height: 1.2;
+  margin: 1.2em 0;
 }
 
 /* line 14, sass/global/_grid.scss */
@@ -1610,6 +1608,440 @@ footer ul li:after {
     display: none;
   }
 }
+/* line 2, sass/layout/_front-page.scss */
+.front-widget-area h2 {
+  color: #000a2d;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  border-bottom: 1px solid #000a2d;
+}
+/* line 7, sass/layout/_front-page.scss */
+.front-widget-area h2 > a {
+  border-bottom: none;
+}
+/* line 12, sass/layout/_front-page.scss */
+.front-widget-area h3 {
+  color: #000a2d;
+  border-bottom: 1px solid #000a2d;
+}
+/* line 16, sass/layout/_front-page.scss */
+.front-widget-area h3 > a {
+  border-bottom: none;
+}
+/* line 20, sass/layout/_front-page.scss */
+.front-widget-area h4 > a {
+  border-bottom: none;
+}
+
+/* line 29, sass/layout/_front-page.scss */
+#events {
+  margin-bottom: 18px;
+  clear: both;
+  overflow: auto;
+}
+/* line 33, sass/layout/_front-page.scss */
+#events .item {
+  clear: both;
+}
+/* line 35, sass/layout/_front-page.scss */
+#events .item .event-date {
+  float: left;
+  height: 54px;
+  width: 54px;
+  margin: 0 10px 18px 0;
+  border: 1px solid #000a2d;
+  border-top: 18px solid #000a2d;
+  text-align: center;
+}
+/* line 43, sass/layout/_front-page.scss */
+#events .item .event-date .month {
+  color: #dddddd;
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 18px;
+}
+/* line 49, sass/layout/_front-page.scss */
+#events .item .event-date .day {
+  color: #000a2d;
+  font-size: 25px;
+  line-height: 36px;
+}
+/* line 54, sass/layout/_front-page.scss */
+#events .item .event-date .month, #events .item .event-date .day {
+  position: relative;
+  top: -18px;
+}
+/* line 61, sass/layout/_front-page.scss */
+#events .item .time {
+  font-size: .95em;
+}
+
+/* line 1, sass/module/_meta.scss */
+.my_meta_control .description {
+  display: none;
+}
+
+/* line 5, sass/module/_meta.scss */
+.my_meta_control label {
+  display: block;
+  font-weight: bold;
+  margin: 6px;
+  margin-bottom: 0;
+  margin-top: 12px;
+}
+
+/* line 14, sass/module/_meta.scss */
+.my_meta_control p.small label,
+.my_meta_control p.medium label {
+  margin-bottom: 10px;
+}
+
+/* line 18, sass/module/_meta.scss */
+.my_meta_control label span {
+  display: inline;
+  font-weight: normal;
+}
+
+/* line 23, sass/module/_meta.scss */
+.my_meta_control span {
+  color: #999;
+  display: block;
+}
+
+/* line 29, sass/module/_meta.scss */
+.my_meta_control textarea,
+.my_meta_control input[type='text'] {
+  margin-bottom: 3px;
+  width: 99%;
+}
+
+/* line 35, sass/module/_meta.scss */
+.my_meta_control textarea,
+.my_meta_control input.repeatable {
+  width: 89%;
+}
+
+/* line 39, sass/module/_meta.scss */
+.my_meta_control h4 {
+  color: #999;
+  font-size: 1em;
+  margin: 15px 6px;
+  text-transform: uppercase;
+}
+
+/* line 46, sass/module/_meta.scss */
+.my_meta_control p.small {
+  width: 23%;
+  margin-left: 2%;
+  float: left;
+}
+
+/* line 52, sass/module/_meta.scss */
+.my_meta_control p.medium {
+  width: 48%;
+  margin-left: 2%;
+  float: left;
+}
+
+/* line 58, sass/module/_meta.scss */
+.my_meta_control p.first-child {
+  margin-left: 0;
+}
+
+/* line 14, sass/module/_courses.scss */
+.courses {
+  height: 100px;
+  width: 172px;
+  margin: 0 4px 4px 0;
+  padding: 0 4px 0 4px;
+  position: relative;
+  background-color: #ebebeb;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid;
+  border-color: #bcbec0;
+  font-family: 'Open Sans', sans-serif;
+  color: #112b80;
+  font-weight: 600;
+}
+/* line 28, sass/module/_courses.scss */
+.courses:hover {
+  background-color: #bcbec0;
+  cursor: pointer;
+}
+/* line 33, sass/module/_courses.scss */
+.courses .course-name {
+  font-size: 1.15em;
+  margin: 0;
+}
+/* line 38, sass/module/_courses.scss */
+.courses .course-description {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #ebebeb;
+  width: 0;
+  height: 0;
+  transition: none;
+  overflow: hidden;
+}
+/* line 46, sass/module/_courses.scss */
+.courses .course-description .close-button {
+  display: none;
+}
+/* line 51, sass/module/_courses.scss */
+.courses .course-description-open {
+  width: 40%;
+  height: 40%;
+  font-weight: 300;
+  margin: auto;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.5s ease;
+  border: 3px solid;
+  border-color: #bcbec0;
+  padding: 30px;
+  z-index: 999994;
+}
+/* line 65, sass/module/_courses.scss */
+.courses .course-description-open .close-button {
+  display: block;
+  line-height: 33px;
+  position: absolute;
+  top: 8px;
+  right: 6px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #bcbec0;
+}
+/* line 74, sass/module/_courses.scss */
+.courses .course-description-open .close-button:hover {
+  color: #ff7f7f;
+}
+/* line 78, sass/module/_courses.scss */
+.courses .course-number {
+  font-size: 1em;
+  font-weight: 100;
+  margin: 0 0 0.5em 0;
+}
+/* line 84, sass/module/_courses.scss */
+.courses .course-credit {
+  position: absolute;
+  bottom: 1px;
+  right: 6px;
+  text-align: center;
+}
+/* line 90, sass/module/_courses.scss */
+.courses .course-credit .credit-label {
+  font-size: .8em;
+}
+/* line 94, sass/module/_courses.scss */
+.courses .course-credit .credit-number {
+  font-size: 1.2em;
+  position: relative;
+  top: 10px;
+}
+/* line 101, sass/module/_courses.scss */
+.courses .catagory {
+  font-size: 9px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+  bottom: -5px;
+}
+
+/* line 112, sass/module/_courses.scss */
+.ie7 .courses .course-description-open {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: none;
+  z-index: 999994;
+}
+
+/* line 121, sass/module/_courses.scss */
+.omega {
+  margin-right: 0px;
+}
+/* line 124, sass/module/_courses.scss */
+.omega:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 131, sass/module/_courses.scss */
+.clear {
+  content: "";
+  clear: both;
+}
+
+/* line 136, sass/module/_courses.scss */
+.page-breaker {
+  border-color: #fff;
+  background-color: #fff;
+}
+/* line 141, sass/module/_courses.scss */
+.page-breaker .catagory {
+  color: none;
+}
+/* line 145, sass/module/_courses.scss */
+.page-breaker:hover {
+  background-color: none;
+}
+/* line 148, sass/module/_courses.scss */
+.page-breaker:hover .catagory {
+  color: none;
+}
+
+/* line 154, sass/module/_courses.scss */
+.course-highlighted {
+  border-color: #112b80;
+  background-color: #112b80;
+}
+/* line 158, sass/module/_courses.scss */
+.course-highlighted .catagory, .course-highlighted .course-name, .course-highlighted .course-number, .course-highlighted .course-credit {
+  color: #ebebeb;
+}
+/* line 163, sass/module/_courses.scss */
+.course-highlighted:hover .catagory, .course-highlighted:hover .course-name, .course-highlighted:hover .course-number, .course-highlighted:hover .course-credit {
+  color: #112b80;
+}
+
+/* line 169, sass/module/_courses.scss */
+.course-nobox {
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 5px 3px;
+  margin-bottom: 5px;
+}
+
+/* line 179, sass/module/_courses.scss */
+.course-section {
+  margin-top: 20px;
+}
+/* line 182, sass/module/_courses.scss */
+.course-section h3 {
+  font-weight: bolder;
+  margin-bottom: 1em;
+}
+
+/* line 188, sass/module/_courses.scss */
+#course-key {
+  height: 50px;
+  padding: 13px 0 0 24px;
+}
+/* line 191, sass/module/_courses.scss */
+#course-key h3 {
+  color: #ebebeb;
+}
+/* line 194, sass/module/_courses.scss */
+#course-key:hover {
+  cursor: help;
+}
+/* line 196, sass/module/_courses.scss */
+#course-key:hover h3 {
+  color: #112b80;
+}
+
+/* line 202, sass/module/_courses.scss */
+.courses-nav {
+  height: 25px;
+  font-size: 120%;
+  background-color: #ebebeb;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid;
+  border-color: #bcbec0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-left: 4px;
+  color: #112b80;
+}
+/* line 213, sass/module/_courses.scss */
+.courses-nav:hover {
+  background-color: #bcbec0;
+  border-color: #bcbec0;
+  cursor: pointer;
+}
+
+/* line 220, sass/module/_courses.scss */
+#roadmap-list-wrap {
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #bcbec0;
+  background-color: #ebebeb;
+  height: 25px;
+}
+
+/* line 228, sass/module/_courses.scss */
+#roadmap-list {
+  border-radius: 0;
+  border: none;
+  width: 201px;
+  height: 29px;
+  padding: 0;
+  position: relative;
+  top: -4px;
+}
+/* line 237, sass/module/_courses.scss */
+#roadmap-list:focus {
+  outline: none;
+}
+
+/* line 242, sass/module/_courses.scss */
+.course-info {
+  font-size: 0.5em;
+  display: inline;
+  vertical-align: middle;
+  border: 1px solid #bcbec0;
+  padding: 1px 6px 1px 5px;
+  border-radius: 9px;
+  position: relative;
+  z-index: 999993;
+}
+/* line 252, sass/module/_courses.scss */
+.course-info .course-info-details {
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 200px;
+  z-index: 999992;
+  background-color: #ebebeb;
+  border: 1px solid #bcbec0;
+  padding: 5px;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+/* line 265, sass/module/_courses.scss */
+.course-info:hover {
+  cursor: help;
+}
+/* line 266, sass/module/_courses.scss */
+.course-info:hover .course-info-details {
+  display: block;
+}
+
+/* line 274, sass/module/_courses.scss */
+.ie7 .course-info .course-info-details {
+  top: 40px;
+}
+
+/* line 279, sass/module/_courses.scss */
+.single-course .credits {
+  text-align: center;
+}
+
 /* line 7, sass/module/sticky-footer/_sticky-footer.scss */
 #wrap {
   min-height: 100%;

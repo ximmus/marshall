@@ -23,14 +23,14 @@ html > body {
 
 p, ol, ul {
   font-size: 1em; // 14px
-  line-height: 1.2857142; // 18px
-  margin-top: 1.2857142em;
-  margin-bottom: 1.2857142em;
+  line-height: 1.2857142857; // 18px
+  margin-top: 1.2857142857em; // 18px
+  margin-bottom: 1.2857142857em; // 18px
   @include breakpoint( phone ) {
     font-size: 0.8571428em; // 12px
-    line-height: 1.5; // 18px/12px
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    line-height: 1.5; // 18px
+    margin-top: 1.5em; // 18px
+    margin-bottom: 1.5em; // 18px
   }
 }
 
@@ -41,51 +41,48 @@ ol, ul {
 h1 {
   font-size: 3em; // 42px
   line-height: 1.2857142; // 54px
-  margin-top: 0.4285714em; // 18px
-  margin-bottom: 0.4285714em; // 18px
+  margin-top: 0.4285714286em 0; // 18px
   // breakpoints
   @include breakpoint( tablet ) {
     font-size: 2.5em; // 35px
     line-height: 1.0285714; // 36px
-    margin-top: 0.5142857em; // 18px
-    margin-bottom: 0.5142857em; // 18px
+    margin-top: 0.5142857em 0; // 18px
   }
   @include breakpoint( phone ) {
     font-size: 2em; // 28px
     line-height: 1.2857142; // 36px
-    margin-top: 0.6428571em; // 18px
-    margin-bottom: 0.6428571em; // 18px
+    margin: 0.6428571em 0; // 18px
   }
 }
 
 h2 {
-  font-size: 2.25em;
-  line-height: 1.1428571;
-  margin-bottom: 0.5714285em;
+  font-size: 2.2857142857em; // 32px
+  line-height: 1.125; // 36px
+  margin: 0.5625em 0; // 18px
   // breakpoints
   @include breakpoint( tablet ) {
-    font-size: 2em;
+    font-size: 2em; // 28px
   }
   @include breakpoint( phone ) {
-    font-size: 1.8em;
+    font-size: 1.8em; // 25.2px
   }
 }
 
 h3 {
-  font-size: 1.175em;
-  line-height: 1.0942249;
-  margin-bottom: 1.0942249em;
+  font-size: 1.1428571429em; // 16px
+  line-height: 1.125; // 18px
+  margin: 1.125em 0; // 18px
   // breakpoints
   @include breakpoint( tablet ) {
-    font-size: 1.15em;
+    font-size: 1.15em; // 16.1px
   }
   @include breakpoint( phone ) {
-    font-size: 1.1em;
+    font-size: 1.1em; // 15.4px
   }
 }
 
 h4 {
-  font-size: 1.125em;
-  line-height: 1.1428571;
-  margin-bottom: 1.1428571em;
+  font-size: 1.0714285714em; // 15px
+  line-height: 1.2; // 18px
+  margin: 1.2em 0; // 18px
 }

@@ -5,7 +5,7 @@
  <section id="main" class="row">
 
   <article id="main-content" class="twelve columns" role="main">
-        
+
     <?php the_title( '<h1>', '</h1>' ); ?>
 
     <div class="entrytext">

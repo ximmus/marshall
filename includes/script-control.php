@@ -47,6 +47,9 @@ function script_manager() {
   // Library Search
   wp_register_script('library-search', get_template_directory_uri() . '/js/library-search.js', array( 'jquery', 'jquery-ui' ), '0.1.0', true);
 
+  // Courses
+  wp_register_script('ufl-courses', get_template_directory_uri() . '/js/courses.js', array( 'jquery' ), '0.1.0', true );
+
   // Enqueue: sitewide scripts enqueue here, shortcode scripts enqueue inside shortcode.
   wp_enqueue_script ( 'modernizr' );    
   wp_enqueue_script ( 'svg-inject' );    

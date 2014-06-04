@@ -1,0 +1,282 @@
+@import "compass/css3/box-sizing";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700);
+
+$color-main: #EBEBEB;
+$color-sub: #414042;
+$color-highlight: #112B80;
+
+$color-required: #BCBEC0;
+$color-core: #FF7F7F;
+$color-elective: #FFA140;
+$color-supportive: #FFCC40;
+$color-skills: #9CD4FF;
+
+.courses{
+  height: 100px;
+  width: 172px;
+  margin: 0 4px 4px 0;
+  padding: 0 4px 0 4px;
+  position: relative;
+  background-color: $color-main;
+  @include box-sizing(border-box);  
+  border: 1px solid;
+  border-color: $color-required;
+  font-family: 'Open Sans', sans-serif;
+  color: $color-highlight;
+  font-weight: 600;
+  
+  &:hover {
+    background-color: $color-required;
+    cursor: pointer; 
+  }
+
+  .course-name {
+    font-size: 1.15em;
+    margin: 0;
+  }
+
+  .course-description{
+    @include box-sizing(border-box);
+    background-color: $color-main;
+    width: 0;
+    height: 0;
+    transition: none;
+    overflow: hidden;
+    
+    .close-button {
+        display: none;
+      }
+  }
+
+  .course-description-open{
+    width: 40%;
+    height: 40%;
+    font-weight: 300;
+    margin: auto;
+    overflow: auto;
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    transition: all 0.5s ease;
+    border: 3px solid;
+    border-color: $color-required;
+    padding: 30px;
+    z-index: 999994;
+
+    .close-button {
+      display: block;
+      line-height: 33px;
+      position: absolute;
+      top: 8px;
+      right: 6px;
+      font-size: 40px;
+      cursor: pointer;
+      color: $color-required;
+      &:hover{color: $color-core;}
+    }
+  }
+
+  .course-number{
+    font-size: 1em;
+    font-weight: 100;
+    margin: 0 0 0.5em 0;
+  }
+
+  .course-credit {
+    position: absolute;
+    bottom: 1px;
+    right: 6px;
+    text-align: center;
+
+   .credit-label{
+      font-size: .8em;
+   }
+    
+    .credit-number{
+      font-size: 1.2em;
+      position: relative;
+      top: 10px;
+    }
+  }
+
+  .catagory{
+    font-size: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+    bottom: -5px;
+  }
+}
+
+// IE fix
+.ie7 .courses .course-description-open {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  left: 0; bottom: 0;
+  transition: none;
+  z-index: 999994;
+}
+
+.omega{
+    //remove right margin on last of row
+    margin-right: 0px;
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+}
+
+.clear{
+  content: "";
+  clear: both;
+}
+
+.page-breaker{
+  border-color: #fff;
+  background-color: #fff;
+
+
+  .catagory{
+    color: none;
+  }
+
+    &:hover{
+    background-color: none;
+
+    .catagory{
+      color: none;
+    }
+  }
+}
+  
+.course-highlighted {
+  border-color: $color-highlight;
+  background-color: $color-highlight;
+
+  .catagory, .course-name, .course-number, .course-credit{
+    color: $color-main;
+  }
+
+  &:hover {
+    .catagory, .course-name, .course-number, .course-credit {
+      color: $color-highlight;
+    }
+  }
+}
+
+.course-nobox {
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 5px 3px;
+  margin-bottom: 5px;
+}
+
+// Page Layout //
+
+.course-section{
+  margin-top: 20px;
+
+  h3 {
+    font-weight: bolder;
+    margin-bottom: 1em; 
+  }
+}
+
+#course-key {
+  height: 50px;
+  padding: 13px 0 0 24px;
+  h3{
+    color: $color-main;
+  }
+  &:hover {
+    cursor: help; 
+    h3{
+      color: $color-highlight;
+    }
+  }
+}
+
+.courses-nav {
+  height: 25px;
+  font-size: 120%;
+  background-color: $color-main;
+  @include box-sizing(border-box);  
+  border: 1px solid;
+  border-color: $color-required;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-left: 4px; 
+  color: $color-highlight;
+  
+  &:hover {
+    background-color: $color-required;
+    border-color: $color-required; 
+    cursor: pointer; 
+  }
+}
+
+#roadmap-list-wrap {
+  overflow: hidden;
+  border: 1px solid;
+  border-color: $color-required;
+  background-color: $color-main;
+  height: 25px;
+}
+
+#roadmap-list {
+  border-radius: 0;
+  border: none;
+  width: 201px;
+  height: 29px;
+  padding: 0;
+  position: relative;
+  top: -4px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.course-info {
+  font-size: 0.5em;
+  display: inline;
+  vertical-align: middle; 
+  border: 1px solid $color-required;
+  padding: 1px 6px 1px 5px;
+  border-radius: 9px;
+  position: relative;
+  z-index: 999993;
+
+  .course-info-details {
+    display: none;
+    position: absolute;
+    top: 15px; left: 20px; 
+    width: 200px;
+    z-index: 999992;
+    background-color: $color-main;
+    border: 1px solid $color-required;
+    padding: 5px;
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+
+  &:hover {
+    .course-info-details {
+      display: block;
+    }
+
+    cursor: help;
+  }
+}
+
+.ie7 .course-info .course-info-details {
+  top: 40px;
+}
+
+.single-course {
+  .credits {
+    text-align: center;
+  }
+}

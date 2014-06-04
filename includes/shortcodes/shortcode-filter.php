@@ -17,7 +17,8 @@ function the_content_filter($content) {
         "staff_profile",
         "ufl_button",
         "ufl_row",
-        "ufl_column"
+        "ufl_column",
+        "courses"
         );
 
     // array of custom shortcodes requiring the fix 
